@@ -1,5 +1,6 @@
 /* Import Google Font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -27,10 +28,12 @@ body {
   background: var(--primary-color);
   color: var(--text-color);
 }
+
 ::selection {
   color: #fff;
   background: var(--primary-color);
 }
+
 .wrapper {
   width: 400px;
   background: #fff;
@@ -42,6 +45,7 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 .wrapper header {
   display: flex;
   font-size: 21px;
@@ -51,21 +55,26 @@ body {
   align-items: center;
   border-bottom: 1px solid #ccc;
 }
+
 header i {
   font-size: 0em;
   cursor: pointer;
   margin-right: 8px;
 }
+
 .wrapper.active header i {
   margin-left: 5px;
   font-size: 30px;
 }
+
 .wrapper .input-part {
   margin: 20px 25px 30px;
 }
+
 .wrapper.active .input-part {
   display: none;
 }
+
 .input-part .info-txt {
   display: none;
   font-size: 17px;
@@ -74,18 +83,21 @@ header i {
   border-radius: 7px;
   margin-bottom: 15px;
 }
+
 .input-part .info-txt.error {
   color: var(--error-text-color);
   display: block;
   background: var(--error-color);
   border: 1px solid #f5c6cb;
 }
+
 .input-part .info-txt.pending {
   color: var(--pending-text-color);
   display: block;
   background: var(--pending-color);
   border: 1px solid #bee5eb;
 }
+
 .input-part :where(input, button) {
   width: 100%;
   height: 55px;
@@ -94,6 +106,7 @@ header i {
   font-size: 18px;
   border-radius: 7px;
 }
+
 .input-part input {
   text-align: center;
   padding: 0 15px;
@@ -104,9 +117,11 @@ header i {
 .input-part input:is(:focus, :valid) {
   border: 2px solid var(--primary-color);
 }
+
 .input-part input::placeholder {
   color: rgb(24, 24, 24) !important;
 }
+
 .input-part .separator {
   height: 1px;
   width: 100%;
@@ -116,6 +131,7 @@ header i {
   align-items: center;
   justify-content: center;
 }
+
 .separator::before {
   content: "or";
   color: var(--light-gery);
@@ -123,6 +139,7 @@ header i {
   padding: 0 15px;
   border-radius: 20px;
 }
+
 .input-part button {
   color: var(--text-color);
   cursor: pointer;
@@ -130,6 +147,7 @@ header i {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   transition: 0.3s ease;
 }
+
 .input-part button:hover {
   transform: scale(1.03);
 }
@@ -141,30 +159,37 @@ header i {
   justify-content: center;
   flex-direction: column;
 }
+
 .wrapper.active .weather-part {
   display: flex;
 }
+
 .weather-part img {
   max-width: 125px;
 }
+
 .weather-part .temp {
   display: flex;
   font-weight: 500;
   font-size: 72px;
 }
+
 .weather-part .temp .numb {
   font-weight: 600;
 }
+
 .weather-part .temp .deg {
   font-size: 40px;
   display: block;
   margin: 10px 5px 0 0;
 }
+
 .weather-part .weather {
   font-size: 21px;
   text-align: center;
   margin: -5px 20px 15px;
 }
+
 .weather-part .location {
   display: flex;
   font-size: 19px;
@@ -173,16 +198,19 @@ header i {
   margin-bottom: 30px;
   align-items: flex-start;
 }
+
 .location i {
   font-size: 22px;
   margin: 4px 5px 0 0;
 }
+
 .weather-part .bottom-details {
   display: flex;
   width: 100%;
   justify-content: space-between;
   border-top: 1px solid #ccc;
 }
+
 .bottom-details .column {
   display: flex;
   width: 100%;
@@ -190,31 +218,38 @@ header i {
   align-items: center;
   justify-content: center;
 }
+
 .column i {
   color: var(--secondary-color);
   font-size: 40px;
 }
+
 .column.humidity {
   border-left: 1px solid #ccc;
 }
+
 .column .details {
   margin-left: 3px;
 }
+
 .details .temp,
 .humidity span {
   font-size: 18px;
   font-weight: 500;
   margin-top: -3px;
 }
+
 .details .temp .deg {
   margin: 0;
   font-size: 17px;
   padding: 0 2px 0 1px;
 }
+
 .column .details p {
   font-size: 14px;
   margin-top: -6px;
 }
+
 .humidity i {
   font-size: 37px;
 }
@@ -256,6 +291,17 @@ header i {
   position: absolute;
   top: 12px;
   right: 12px;
+}
+
+.dark-mode span {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.dark-mode button {
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
@@ -265,13 +311,8 @@ header i {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.dark-mode span{
-  font-size: 20px;
-  cursor: pointer;
-}
 
-
-.catch{
+.catch {
   position: absolute;
   top: 0;
   left: 0;
@@ -290,7 +331,7 @@ header i {
   text-align: center;
 }
 
-.catch p a{
+.catch p a {
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
